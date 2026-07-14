@@ -1,5 +1,22 @@
 const toolSections = [
   {
+    title: "🎨 Visual Resources",
+    tools: [
+      {
+        name: "Logo Generator",
+        description: "Free monogram logo maker — type a name, pick a color, download PNG or SVG.",
+        icon: "fas fa-shapes",
+        link: "https://logo-generator.matob.dev/"
+      },
+      {
+        name: "Flaticon",
+        description: "Thousands of free vector icons to use in your projects.",
+        icon: "fas fa-icons",
+        link: "https://www.flaticon.com/"
+      }
+    ]
+  },
+  {
     title: "📦 Conversion and Compression",
     tools: [
       {
@@ -47,17 +64,6 @@ const toolSections = [
         description: "Create a fake API based on JSON files for rapid prototyping.",
         icon: "fas fa-server",
         link: "https://github.com/typicode/json-server/tree/v0"
-      }
-    ]
-  },
-  {
-    title: "🎨 Visual Resources",
-    tools: [
-      {
-        name: "Flaticon",
-        description: "Thousands of free vector icons to use in your projects.",
-        icon: "fas fa-icons",
-        link: "https://www.flaticon.com/"
       }
     ]
   }
