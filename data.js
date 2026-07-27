@@ -4,7 +4,7 @@ const toolSections = [
     tools: [
       {
         name: "Logo Generator",
-        description: "Free monogram logo maker — type a name, pick a color, download PNG or SVG.",
+        description: "Free monogram logo maker: type a name, pick a color, download PNG or SVG.",
         icon: "fas fa-shapes",
         link: "https://logo-generator.matob.dev/"
       },
