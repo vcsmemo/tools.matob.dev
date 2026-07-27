@@ -2,19 +2,18 @@
 # Referrer-Policy and X-Content-Type-Options already come from Cloudflare, so
 # they are not repeated here to avoid sending each header twice.
 #
-# This page runs AdSense. Ad creatives are fetched from domains that are not
-# known in advance, so a resource-level CSP here would either break the ads or
-# have to allow so much (img-src *, frame-src across Google's ad network) that
-# it would protect nothing. So the policy is limited to the directives that
-# cost nothing and still help:
-#   frame-ancestors -> nobody can put this page inside an iframe (clickjacking)
-#   base-uri        -> no injected <base> can repoint every relative URL
-#   form-action     -> a form cannot post to another origin
-#   object-src      -> no <object>/<embed> plugins
-# Loading of scripts and styles is left open on purpose; the protection for
-# that layer is the integrity attribute (SRI) on each tag, still missing here.
+# AdSense was removed and Bootstrap and Font Awesome are now served from this
+# domain (see vendor/README.md), so the policy is closed on 'self'. What is
+# still allowed, and why:
+#   'unsafe-inline' in script-src -> the JSON-LD block is inline; blocked, it
+#                                    disappears from the structured data
+#   'unsafe-inline' in style-src  -> the 404 page has an inline <style>
+#   static.cloudflareinsights.com -> the Web Analytics beacon, injected by
+#                                    Cloudflare at the edge. It is in no file in
+#                                    this repository, and without allowing it the
+#                                    site analytics silently stop being collected
 /*
-  Content-Security-Policy: frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'; object-src 'none'; upgrade-insecure-requests
   Strict-Transport-Security: max-age=31536000
   X-Frame-Options: DENY
   Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
