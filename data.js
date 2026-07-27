@@ -17,6 +17,17 @@ const toolSections = [
     ]
   },
   {
+    title: "🗄️ Databases",
+    tools: [
+      {
+        name: "EXPLAIN Render",
+        description: "Paste a MySQL or PostgreSQL EXPLAIN in JSON and read the query plan as a diagram. Exports SVG and PNG.",
+        icon: "fas fa-sitemap",
+        link: "https://explain-render.matob.dev/"
+      }
+    ]
+  },
+  {
     title: "📦 Conversion and Compression",
     tools: [
       {
