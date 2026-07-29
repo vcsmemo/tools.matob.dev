@@ -46,7 +46,7 @@ Contributions are more than welcome!
 Clone the repo and run locally with a basic HTTP server (optional):
 
 ```bash
-git clone https://github.com/m4tob/tools.matob.dev.git
+git clone https://github.com/matob-dev/tools.matob.dev.git
 cd tools.matob.dev
 npx serve .
 ```
@@ -62,7 +62,7 @@ See the [LICENSE](LICENSE) file for full details.
 
 ## 🤝 Credits
 
-Created with ❤️ by [Matob](https://github.com/m4tob)  
+Created with ❤️ by [Matob](https://github.com/matob-dev)  
 Built with help from [ChatGPT](https://openai.com/chatgpt), your friendly AI assistant 🤖  
 Powered by [Bootstrap 5](https://getbootstrap.com/) and plain JavaScript  
 Deployed with [Cloudflare Pages](https://pages.cloudflare.com/) 
