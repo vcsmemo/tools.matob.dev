@@ -47,6 +47,12 @@ const toolSections = [
         description: "Various tools to manipulate PDF files.",
         icon: "fas fa-file-pdf",
         link: "https://www.ilovepdf.com/en"
+      },
+      {
+        name: "VidSizer",
+        description: "Compress any video to an exact target file size entirely in the browser.",
+        icon: "fas fa-video",
+        link: "https://vidsizer.com/"
       }
     ]
   },
